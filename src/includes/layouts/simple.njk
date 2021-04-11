@@ -1,0 +1,12 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+    <div class="container sp">
+        <div clas="row justify-content-md-center">
+            <div clas="col-md-10">
+                {{content | safe}}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
