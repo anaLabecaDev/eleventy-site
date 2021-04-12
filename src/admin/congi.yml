@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "_site/assets/img" # Media files will be stored in the repo under images/uploads
+public_folder: "/assets/img"
+
+collections:
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "testimonials"
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Quote", name: "quote", widget: "string" }
+      - { label: "Job title", name: "jobTitle", widget: "string" }
+      - { label: "Image", name: "headshot", widget: "image" }
